@@ -1,0 +1,20 @@
+------------------------------------------
+Day5 Prob1 Que1
+------------------------------------------
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/newfolder
+$ echo $(( $RANDOM % 10 ))
+7
+
+------------------------------------------
+Day5 Prob1 Que2
+------------------------------------------
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/newfolder
+$ echo $(( $RANDOM % 6 + 1 ))
+3
+
+------------------------------------------
+Day5 Prob1 Que3
+------------------------------------------
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/newfolder
+$ echo sum= $(( $(( $RANDOM % 6 + 1 )) + $(( $RANDOM % 6 + 1 ))))
+sum= 8

@@ -1,0 +1,66 @@
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /c/linux-content-master
+$ cd ..
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /c
+$ cd ..
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /
+$ cd d
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d
+$ cd raj/newfolder
+bash: cd: raj/newfolder: No such file or directory
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d
+$ cd raj/11apr
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$ touch abc.log def.log ghi.log
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$ for files in `ln *.log` ; do echo $files ; done
+ln: target 'ghi.log': Not a directory
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$ for files in `ln *.log` ; do echo $files ; done
+ln: target 'ghi.log': Not a directory
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$ for files in `ls *.log` ; do echo $files ; done
+abc.log
+def.log
+ghi.log
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$ for files in `ls *.log` ; do folderName `echo $file | awk -F. '{print$1}'` ; echo $folderName ; done
+bash: folderName: command not found
+
+bash: folderName: command not found
+
+bash: folderName: command not found
+
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$ for file in `ls *.log` ; do folderName=`echo $file | awk -F. '{print $1}'` ; echo $folderName ; done
+abc
+def
+ghi
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$ for file in `ls *.log` ; do folderName=`echo $file | awk -F. '{print $1}'` ; mkdir $folderName ; cp $file $folderName ; echo copied $file to $folderName/ ; done
+copied abc.log to abc/
+copied def.log to def/
+copied ghi.log to ghi/
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$ current_date=$(date +%d-%m-%y)
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$ nano appendDate.sh
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$ sh appendDate.sh
+
+LENOVO@DESKTOP-ORS1410 MINGW64 /d/raj/11apr
+$
